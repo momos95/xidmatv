@@ -1,0 +1,3 @@
+tk_xidma_homepage:
+    path:     /accueil
+    defaults: { _controller: TKXidmaBundle:Xidma:accueil }

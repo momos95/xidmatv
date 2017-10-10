@@ -1,0 +1,7 @@
+tk_xidma:
+    resource: "@TKXidmaBundle/Resources/config/routing.yml"
+    prefix:   /xidma
+
+tk_core:
+    resource: "@TKCoreBundle/Resources/config/routing.yml"
+    prefix:   /
