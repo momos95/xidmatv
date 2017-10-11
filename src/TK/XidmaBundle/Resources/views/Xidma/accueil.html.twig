@@ -7,13 +7,67 @@
 {% block body %}
     <br>
 
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Jumbotron</h1>
-            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-image:url('http://placehold.it/1024x300');">
+                <div class="custom-caption">
+                    <p class="text-left">
+                        Message qui va avec le slide.
+                    </p>
+                </div>
+            </div>
+            <div class="item" style="background-image:url({{ asset('bundles/tkcore/img/touba.jpg') }});">
+                <div class="custom-caption">
+                    <p class="text-left">
+                        Touba Mosquée.
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="container" id="main">
+        <h1>This Content is inside the container</h1>
     </div>
 
+    <script>
+        jQuery(function($){
+
+            var demo = {
+                init : function(){
+                    this.carouselControls();
+
+                    $(window).resize(function(){ demo.carouselControls(); });
+                },
+                carouselControls : function(){
+                    var $container = $('#main');
+                    var $slider = $('#carousel-example-generic');
+                    var padding = 15;
+
+                    var rt = ($(window).width() - ($container.offset().left + $container.outerWidth()));
+                    $slider.find('.right.carousel-control').css('right', rt + padding).show();
+                    $slider.find('.left.carousel-control').css('left', rt + padding).show();
+                }
+            };
+
+            demo.init();
+
+        });
+    </script>
 {% endblock %}
 

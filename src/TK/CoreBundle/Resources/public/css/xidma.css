@@ -7,3 +7,46 @@
     min-height: 20%;
     min-width: 30%;
 }
+
+#main{
+    background:#000;
+    color:#fff;
+}
+
+.carousel{
+    height:400px;
+}
+.carousel .item{
+    height:400px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.carousel .item .custom-caption{
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    padding:10% 0;
+    font-size:30px;
+    color:#fff;
+    font-weight:600;
+}
+
+.carousel .carousel-control.left,
+.carousel .carousel-control.right,
+.carousel .carousel-control.left:hover,
+.carousel .carousel-control.right:hover{
+    background:none;
+}
+
+.carousel .carousel-control{
+    width: 20px;
+    height:20px;
+    top:50%;
+}
+
+.carousel .carousel-control span{
+    position:relative;
+    left:0;
+}
