@@ -1,0 +1,9 @@
+.jumbotron{
+    background : url('../img/touba.jpg') ;
+    height: 330px;
+    width: 100%;
+    max-height: 50%;
+    max-width: 100%;
+    min-height: 20%;
+    min-width: 30%;
+}
