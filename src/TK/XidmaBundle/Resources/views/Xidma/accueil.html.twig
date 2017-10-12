@@ -41,9 +41,18 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         </a>
     </div>
-    <div class="container" id="main">
-        <h1>This Content is inside the container</h1>
+
+    <div id="main" style="margin-top: 0px;">
+        <div class="defileParent" style="margin-top: 0px;">
+            <span class="defile" style="margin-top: 0px;"
+                    data-text=" Texte défilant en css et l'utilisation de l'attribut data-text pour fournir un roulement continu">
+                Texte défilant en css et l'utilisation de l'attribut data-text pour fournir un roulement continu
+            </span>
+        </div>
     </div>
+
+    {% include "TKXidmaBundle:Xidma:playlist_block.html.twig" %}
+    <span class="sep_line"></span>
 
     <script>
         jQuery(function($){
