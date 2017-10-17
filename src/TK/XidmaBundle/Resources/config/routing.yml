@@ -1,3 +1,15 @@
 tk_xidma_homepage:
     path:     /accueil
     defaults: { _controller: TKXidmaBundle:Xidma:accueil }
+
+tk_xidma_direct:
+    path:    /direct
+    defaults: { _controller: TKXidmaBundle:Xidma:direct }
+
+tk_xidma_galerie:
+    path:    /galerie
+    defaults: { _controller: TKXidmaBundle:Xidma:galerie }
+
+tk_xidma_search:
+    path:    /search
+    defaults: { _controller: TKXidmaBundle:Xidma:search }

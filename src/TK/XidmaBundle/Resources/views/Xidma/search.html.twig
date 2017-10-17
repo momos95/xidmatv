@@ -1,0 +1,72 @@
+{% extends "TKCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Accueil
+{% endblock %}
+
+{% block body %}
+
+    <div class="search-background">
+        <br>
+        <!--<img src="https://lh4.googleusercontent.com/-T4pmKmAS5D4/U0uihfPzEZI/AAAAAAAAA2c/sN0mjJS2bx4/w957-h374-no/141.jpg">-->
+        <img src="{{ asset('bundles/tkcore/img/touba.jpg') }}">
+    </div>
+    <div class="well-searchbox">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Keyword</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Country</label>
+                <div class="col-md-8">
+                    <select class="form-control" placeholder="Country">
+                        <option value="">All</option>
+                        <option value="">Country 1</option>
+                        <option value="">Country 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Province</label>
+                <div class="col-md-8">
+                    <select class="form-control" placeholder="Province">
+                        <option value="">All</option>
+                        <option value="">Province 1</option>
+                        <option value="">Province 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">City</label>
+                <div class="col-md-8">
+                    <select class="form-control" placeholder="City">
+                        <option value="">All</option>
+                        <option value="">City 1</option>
+                        <option value="">City 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Category</label>
+                <div class="col-md-8">
+                    <select class="form-control" placeholder="Category">
+                        <option value="">All</option>
+                        <option value="">Category 1</option>
+                        <option value="">Category 2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-offset-4 col-sm-5">
+                <button type="submit" class="btn btn-success">Search</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

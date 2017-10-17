@@ -24,32 +24,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">{{ nom_site }}</a>
+                <a class="navbar-brand" href="{{ path("tk_site_homepage") }}">{{ nom_site }}</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Direct</a></li>
+                    <li><a href="{{ path("tk_xidma_homepage") }}">Accueil</a></li>
+                    <li><a href="{{ path("tk_xidma_direct") }}">Direct</a></li>
+                    <li><a href="{{ path("tk_xidma_galerie") }}">Galerie</a></li>
                     <li><a href="#">Guide Programme</a></li>
 
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <form class="navbar-form navbar-left" role="search" method="post" action="#">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Rechercher un programme">
-                        </div>
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                    </form>
+                    <li><a href="{{ path("tk_xidma_search") }}"><span class="glyphicon glyphicon-search"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <br><br>
 </header>
-
+<br><br>
 
 {% block body %}
 {% endblock %}
